@@ -6,8 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Understanding TypeScript</title>
   <script src="app.js" defer></script>
+  <script src="basic.js" defer></script>
+  <script src="calculate.js" defer></script>
 </head>
 <body>
-
+  <label for="quantity1">Quantity 1:</label>
+    <input type="number" id="quantity1" name="quantity1" min="1" max="100" value="0">
+  <label for="quantity2">Quantity 2:</label>
+    <input type="number" id="quantity2" name="quantity2" min="1" max="100" value="0">
+  <button onclick="calculateTwoNumbers(quantity1, quantity2)">Calculate</button>
+  <label for="result">Result:</label>
+    <input type="text" id="result" name="result" readonly>
 </body>
 </html>
