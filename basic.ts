@@ -1,4 +1,4 @@
-function add (n1: number, n2: number, showResult: boolean, phrase: string) {
+function addBasicTs (n1: number, n2: number, showResult: boolean, phrase: string) {
     // console.log(typeof number1)
     // if (typeof n1 !== 'number' || typeof n2 !== 'number') {
     //     throw new Error('Incorrect input!');
@@ -13,8 +13,8 @@ function add (n1: number, n2: number, showResult: boolean, phrase: string) {
 let number1 : number;
 number1 = 5;
 const number2 = 2.8;
-const printResult = true;
+const printResultBasicTs = true;
 const resultPhrase = 'Result is: ';
 
-const result = add(number1, number2, printResult, resultPhrase);
+const resultBasicTs = addBasicTs(number1, number2, printResultBasicTs, resultPhrase);
 console.log(result);
