@@ -1,3 +1,4 @@
 autorefresh
 Browsersync
+lite-server
 tsc
