@@ -10,8 +10,10 @@ Learning the basics of typescript from the Udemy course
 3. In another terminal run the xxx.ts file which you want to execute
 
 Configurate "Watch Mode" - this will eliminate the need to write tsc app.ts to compile the code
+
 4. 'tsc app.ts --watch' | 'tsc app.ts -w'
 
-To run all the project to execute automatically without the tsc app.ts command in terminal
+To run all files in the project to execute automatically without the tsc app.ts command in terminal
+
 5. 'tsc --init' - this will create a tsconfig.json file
 6. 'tsc' - this will run all the .ts files in the project
