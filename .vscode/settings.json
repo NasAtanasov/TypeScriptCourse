@@ -1,5 +1,14 @@
 {
     "cSpell.words": [
+        "tsc",
         "Udemy"
-    ]
+    ],
+    "cSpell.customDictionaries": {
+        "custom-dictionary-workspace": {
+            "name": "custom-dictionary-workspace",
+            "path": "${workspaceFolder:first-project}/.cspell/custom-dictionary-workspace.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
+    }
 }
