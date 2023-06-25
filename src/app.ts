@@ -1,9 +1,20 @@
-const button = document.querySelector('button');
+console.log('app.ts');
 
-function clickHandler(message:string) {
-    console.log('Clicked!' + message);
+const userName = 'Max';
+
+let age = 30;
+
+age = 29;
+
+
+function add(a: number, b: number) {
+    let result;
+    result = a + b;
+    return result;
 }
 
-if (button) {
-    button.addEventListener('click', clickHandler.bind(null, 'You\'re welcome!' ));
-}
+// if (age > 20) {
+//     let isOld = true;
+// }
+
+// console.log(isOld);
