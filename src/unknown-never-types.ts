@@ -12,5 +12,5 @@ function generateError(message:string, code: number): never {
     //while(true){}
 }
 
-const result = generateError('An error Occurred!', 500);
-console.log(result);
+const result1 = generateError('An error Occurred!', 500);
+console.log(result1);

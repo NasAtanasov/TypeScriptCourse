@@ -4,4 +4,5 @@ function calculateTwoNumbers(n1: number, n2: number) {
     let result = document.getElementById("result") as HTMLInputElement;
 
     result.value = (Number(number1.value) + Number(number2.value)).toString();
+    return (n1 + n2);
 }
