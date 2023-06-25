@@ -7,7 +7,7 @@ Learning the basics of typescript from the Udemy course
 [Browsersync] Access URLs:
  --------------------------------------
        Local: http://localhost:3000
-3. In another terminal run the xxx.ts file which you want to execute
+3. In another terminal run the 'tsc xxx.ts' file which you want to execute
 
 Configurate "Watch Mode" - this will eliminate the need to write tsc app.ts to compile the code
 
