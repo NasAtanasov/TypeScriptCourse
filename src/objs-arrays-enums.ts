@@ -18,7 +18,7 @@ enum Role {
     AUTHOR
 };
 
-const person = {
+const person2 = {
     name: "NasA",
     age: 30,
     hobbies: ['Gaming', 'Coding'],
@@ -32,16 +32,16 @@ const person = {
 let favoriteActivities: any[];
 favoriteActivities = ['Sports', 1];
 
-console.log(person.name);
-console.log(person.age);
+console.log(person2.name);
+console.log(person2.age);
 
-for (const hobby of person.hobbies) {
+for (const hobby of person2.hobbies) {
     console.log(hobby);
 }
 // for (const roles of person.role) {
 //     console.log(roles);
 // }
 
-if (person.role === Role.AUTHOR) {
+if (person2.role === Role.AUTHOR) {
     console.log('is admin');
 }
