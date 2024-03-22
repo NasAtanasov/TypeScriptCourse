@@ -1,80 +1,48 @@
-class Department {
-    // private id: string;
-    // private name: string;
-    protected employees: string[] = [];
-
-    constructor(private readonly id: string, public name: string) {
-        // this.id = id;
-        // this.name = n;
-    }
-
-    describe(this: Department) {
-        console.log(`Department (${this.id}): ${this.name}`);
-    }
-
-    addEmployee(employee: string) {
-        // validation
-        // this.id = 'd2';
-        this.employees.push(employee);
-    }
-
-    printEmployeeInformation() {
-        console.log(this.employees.length);
-        console.log(this.employees);
-    }
+// type AddFn = (a: number, b: number) => number;
+interface AddFn {
+    (a: number, b: number): number;
 }
 
-class ITDepartment extends Department {
-    constructor(id: string, public admins: string[]) {
-        super(id, 'IT',);
-    }
+let add: AddFn;
+
+add = (n1: number, n2: number) => {
+    return n1 + n2;
+};
+
+interface Named {
+    readonly name?: string;
+    outputName?: string;
 }
 
-class AccountingDepartment extends Department {
-    constructor(id: string, private reports: string[]) {
-        super(id, 'Accounting');
-    }
+interface Greetable extends Named{
+    greet(phrase: string) :void;
+}
 
-    addEmployee(name: string) {
-        if (name === 'Max') {
-            return;
+class Person implements Greetable {
+    name?: string;
+    age = 30;
+
+    constructor(n?: string) {
+        if (n) {
+            this.name = n;
         }
-        this.employees.push(name);
     }
 
-    addReports(text: string) {
-        this.reports.push(text);
-    }
-
-    printReports() {
-        console.log(this.reports);
+    greet(phrase: string): void {
+        if (this.name) {
+            console.log(phrase + ' ' + this.name)
+        } else {
+            console.log('Hi!');
+        }
     }
 }
 
-const it = new ITDepartment('d1', ['Nas']);
+let user1: Greetable;
 
-it.addEmployee('Max');
-it.addEmployee('Manu');
+user1 = new Person('Henry');
 
-// it.employees[2] = 'Anna';
+const twoNumbers = add(1, 2);
+console.log(twoNumbers);
 
-it.describe();
-it.name = 'NEW NAME';
-it.printEmployeeInformation();
-
-console.log(it);
-
-const accounting = new AccountingDepartment('d2', []);
-
-accounting.addReports('Someone went wrong...');
-
-accounting.addEmployee('Max');
-accounting.addEmployee('Manu');
-
-accounting.printReports();
-accounting.printEmployeeInformation();
-
-
-// const accountingCopy = { name: 'DUMMY', describe: accounting.describe };
-
-// accountingCopy.describe();
+user1.greet('Hi there - I\'m');
+console.log(user1)
