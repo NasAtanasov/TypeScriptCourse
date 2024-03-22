@@ -1,3 +1,14 @@
+// type AddFn = (a: number, b: number) => number;
+interface AddFn {
+    (a: number, b: number): number;
+}
+
+let add: AddFn;
+
+add = (n1: number, n2: number) => {
+    return n1 + n2;
+};
+
 interface Named {
     readonly name: string;
 }
@@ -22,6 +33,9 @@ class Person implements Greetable {
 let user1: Greetable;
 
 user1 = new Person('Max');
+
+const twoNumbers = add(1, 2);
+console.log(twoNumbers);
 
 user1.greet('Hi there - I\'m');
 console.log(user1)
