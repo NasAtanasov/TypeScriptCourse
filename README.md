@@ -12,7 +12,7 @@ Learning the basics of typescript from the Udemy course
 Configurate "Watch Mode" - this will eliminate the need to write 'tsc' to compile the code
 
 4. 'tsc --watch' - to execute all non-excluded files in the project
-   'tsc app.ts --watch' - to execute specific file in the project
+   'tsc app.ts --watch' - to execute specific files in the project
 
 To run all files in the project to execute automatically without the tsc app.ts command in terminal
 
