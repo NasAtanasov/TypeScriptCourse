@@ -9,7 +9,7 @@ Learning the basics of typescript from the Udemy course
        Local: http://localhost:3000
 3. In another terminal run the 'tsc xxx.ts' file which you want to execute
 
-Configurate "Watch Mode" - this will eliminate the need to write 'tsc' to compile the code
+Configure "Watch Mode" - this will eliminate the need to write 'tsc' to compile the code
 
 4. 'tsc --watch' - to execute all non-excluded files in the project
    'tsc app.ts --watch' - to execute specific files in the project
