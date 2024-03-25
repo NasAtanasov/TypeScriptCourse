@@ -109,5 +109,12 @@ function moveAnimal(animal: Animal) {
     // }
 }
 
-moveAnimal({type: 'bird', flyingSpeed: 10})
+moveAnimal({type: 'bird', flyingSpeed: 10});
 
+// const paragraph = document.querySelector('p');
+// const userInputElement = <HTMLInputElement>document.getElementById('user-input')!;
+const userInputElement = document.getElementById('user-input');
+
+if (userInputElement) {
+    (userInputElement as HTMLInputElement).value = 'Hi, there!';
+}
