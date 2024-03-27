@@ -44,6 +44,8 @@ console.log(countAndDescribe(['123', '123', '123']));
 console.log(countAndDescribe('H'));
 console.log(countAndDescribe('Hi there!'));
 
+function extractAndConvert<T extends object, U extends keyof T>(obj: T, key: U) {
+    return 'Value: ' + obj[key];
+}
 
-
-
+console.log(extractAndConvert({ name: 'Max' }, 'name'));
