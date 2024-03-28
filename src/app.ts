@@ -49,3 +49,48 @@ function extractAndConvert<T extends object, U extends keyof T>(obj: T, key: U) 
 }
 
 console.log(extractAndConvert({ name: 'Max' }, 'name'));
+
+class DataStorage<T extends string | number | boolean> {
+    private data: T[] = [];
+
+    addItem(item: T) {
+        this.data.push(item);
+    }
+
+    removeItem(item: T) {
+        if (this.data.indexOf(item) === -1) {
+            return;
+        }
+        this.data.splice(this.data.indexOf(item), 1); //-1
+    }
+
+    getItems() {
+        return [...this.data];
+    }
+}
+
+const textStorage = new DataStorage<string>();
+textStorage.addItem('Max');
+textStorage.addItem('Manu');
+textStorage.removeItem('Max');
+textStorage.addItem('Mad Max');
+
+console.log(textStorage.getItems());
+
+
+const numberStorage = new DataStorage<number>();
+numberStorage.addItem(1);
+numberStorage.addItem(2);
+numberStorage.removeItem(1);
+numberStorage.addItem(3);
+
+console.log(numberStorage.getItems());
+
+// const objectStorage = new DataStorage<object>();
+// const maxObj = { name: 'Max' };
+// const manuObj = { name: 'Manu' };
+// objectStorage.addItem(maxObj);
+// objectStorage.addItem(manuObj);
+// objectStorage.removeItem(manuObj);
+
+// console.log(objectStorage.getItems());
