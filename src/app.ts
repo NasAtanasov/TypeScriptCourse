@@ -43,16 +43,38 @@ console.log(pers);
 // --
 console.log('-------------------------------------------')
 
-function Log(target: any, propertyName: string | Symbol) {
-    console.log('Property decorator!');
+function Log1(target: any, propertyName: string | Symbol) {
+    console.log('Property decorator! 1');
     console.log(target, propertyName);
 }
 
+function Log2(target: any, name: string, descriptor: PropertyDescriptor) {
+    console.log('Accessor decorator! 2');
+    console.log(target);
+    console.log(name);
+    console.log(descriptor);
+}
+
+function Log3(target: any, name: string | Symbol, descriptor: PropertyDescriptor) {
+    console.log('Method decorator! 3');
+    console.log(target);
+    console.log(name);
+    console.log(descriptor);
+}
+
+function Log4(target: any, name: string | Symbol, position: number) {
+    console.log('Parameter decorator! 4');
+    console.log(target);
+    console.log(name);
+    console.log(position);
+}
+
 class Product {
-    @Log
+    @Log1
     title: string;
     private _price: number;
 
+    @Log2
     set price(val: number) {
         if (val > 0) {
             this._price = val;
@@ -66,7 +88,8 @@ class Product {
         this._price = p;
     }
 
-    getPriceWithTAx(tax: number) {
+    @Log3
+    getPriceWithTAx(@Log4 tax: number) {
         return this._price * (1+ tax);
     }
 }
