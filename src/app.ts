@@ -58,9 +58,10 @@ function Log2(target: any, name: string, descriptor: PropertyDescriptor) {
     console.log(target);
     console.log(name);
     console.log(descriptor);
+
 }
 
-function Log3(target: any, name: string | Symbol, descriptor: PropertyDescriptor) {
+function Log3(target: any, name: string, descriptor: PropertyDescriptor) {
     console.log('Method decorator! 3');
     console.log(target);
     console.log(name);
