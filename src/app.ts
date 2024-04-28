@@ -110,16 +110,17 @@ class ProjectList {
         this.assignedProjects = projects;
         this.renderProjects();
       });
+
     this.attach();
     this.renderContent();
   }
 
   private renderProjects() {
-    const listEl = document.getElementById(`${this.type}-project-list`);
+    const listEl = document.getElementById(`${this.type}-project-list`)! as HTMLUListElement;
     for (const prjItem of this.assignedProjects) {
       const listItem = document.createElement('li');
       listItem.textContent = prjItem.title;
-      listEl.appendChild(listItem)
+      listEl.appendChild(listItem);
     }
   }
 
@@ -207,6 +208,7 @@ class ProjectInput {
     const userInput = this.gatherUserInput();
     if (Array.isArray(userInput)) {
       const [title, desc, people] = userInput;
+      projectState.addProject(title, desc, people);
       this.clearInputs();
     }
   }
