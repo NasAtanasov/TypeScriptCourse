@@ -5,9 +5,13 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "lite-server",
+    "start": "webpack-dev-server",
     "build": "webpack"
   },
+  "keywords": [
+    "typescript",
+    "course"
+  ],
   "author": "Nas Atanasov",
   "license": "ISC",
   "devDependencies": {
